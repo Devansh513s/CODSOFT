@@ -1,7 +1,7 @@
 import tkinter as tk
 
 def click(button_text):
-    """Handles button click events"""
+    
     current = entry.get()
     if button_text == "=":
         try:
@@ -16,17 +16,14 @@ def click(button_text):
     else:
         entry.insert(tk.END, button_text)
 
-# Create main window
 root = tk.Tk()
 root.title("Calculator")
 root.geometry("330x460")
 root.resizable(False, False)
 
-# Entry widget (Display)
 entry = tk.Entry(root, font=("Arial", 24), borderwidth=2, relief="solid", justify="right")
 entry.pack(fill="both", padx=10, pady=10, ipadx=8, ipady=12)
 
-# Button layout
 buttons = [
     ["7", "8", "9", "/"],
     ["4", "5", "6", "*"],
